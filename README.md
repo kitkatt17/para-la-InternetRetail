@@ -40,9 +40,9 @@ mysql
 SOURCE Develop/db/schema.sql
 ```
 
-## Visual Demo
+## Visual 
 
-![Visual Demo]()
+![Visual Example](./Assets/ss-challenge13ex.PNG)
 
 
 ## Links
