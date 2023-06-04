@@ -11,8 +11,7 @@ const port = process.env.port || 3001;
 app.use(routes);
 
 // Connecting to the MySQL database using Sequelize
-const sequelize = new Sequelize('database_name', 'username', 'password', {
-    // replace 'database_name', 'username', 'password'! configure with your actual database credentials.
+const sequelize = new Sequelize('ecommerce_db', 'username', 'password', {
     host: 'localhost',
     dialect: 'mysql',
   });
