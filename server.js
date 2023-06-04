@@ -85,27 +85,27 @@ app.get('/', (req, res) => {
 });
 
 // Get all the products
-app.get('/products', async (req, res) => {
-  try {
-    const products = await Product.findAll();
-    res.json(products);
-  } catch (err) {
-    console.error('Error getting products:', err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
+// app.get('/products', async (req, res) => {
+//   try {
+//     const products = await products.findAll();
+//     res.json(products);
+//   } catch (err) {
+//     console.error('Error getting products:', err);
+//     res.status(500).json({ error: 'Internal server error' });
+//   }
+// });
 
 // Creating a new product
-app.post('/products', async (req, res) => {
-  try {
-    const { name, price } = req.body;
-    const product = await Product.create({ name, price });
-    res.status(201).json(product);
-  } catch (err) {
-    console.error('Error creating product:', err);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
+// app.post('/products', async (req, res) => {
+//   try {
+//     const { name, price } = req.body;
+//     const product = await product.create({ name, price });
+//     res.status(201).json(product);
+//   } catch (err) {
+//     console.error('Error creating product:', err);
+//     res.status(500).json({ error: 'Internal server error' });
+//   }
+// });
 
 // Starting the server
 app.listen(port, () => {

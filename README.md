@@ -34,7 +34,10 @@ THEN I am able to successfully create, update, and delete data in my database
 
 To use application install:
 ```
-schema.sql
+npm i
+sequelize
+mysql
+SOURCE db/schema.sql
 ```
 
 ## Visual Demo
@@ -44,4 +47,4 @@ schema.sql
 
 ## Links
 
-[Github Repo]()
+[Github Repo](https://github.com/kitkatt17/para-la-InternetRetail)
