@@ -37,7 +37,7 @@ To use application install:
 npm i
 sequelize
 mysql
-SOURCE db/schema.sql
+SOURCE Develop/db/schema.sql
 ```
 
 ## Visual Demo

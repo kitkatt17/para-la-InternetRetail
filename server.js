@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const routes = require('./Develop/config/connection');
 // Importing the Sequelize connection
-const { Sequelize, DataTypes, DECIMAL } = require('sequelize');
+const sequelize = require('sequelize');
 
 const app = express();
 const port = process.env.port || 3001;
@@ -11,10 +11,10 @@ const port = process.env.port || 3001;
 app.use(routes);
 
 // Connecting to the MySQL database using Sequelize
-const sequelize = new Sequelize('ecommerce_db', 'username', 'password', {
-    host: 'localhost',
-    dialect: 'mysql',
-  });
+// const sequelize = new Sequelize('ecommerce_db', 'root', 'root', {
+//     host: 'localhost',
+//     dialect: 'mysql',
+//   });
 
 // For the connection to db and server
 app.use(express.json());
@@ -107,7 +107,9 @@ app.get('/', (req, res) => {
 //   }
 // });
 
-// Starting the server
-app.listen(port, () => {
-  console.log(`Server is running and listening on http://localhost:${port}`);
+// Starting the server with synced sequelize models
+sequelize.sync({ force: false }).then(() => {
+    app.listen(port, () => {
+    console.log(`Application is listening on port ${port}!`);
+})
 });
