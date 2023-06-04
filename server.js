@@ -23,42 +23,42 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // Defining the Category database model
-const Category = sequelize.define('Category', {
-    id: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    category_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-});
+// const Category = sequelize.define('Category', {
+//     id: {
+//       type: DataTypes.FLOAT,
+//       allowNull: false,
+//       primaryKey: true,
+//       autoIncrement: true,
+//     },
+//     category_name: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+// });
 
 // Defining the Product database model
-const Product = sequelize.define('Product', {
-    id: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    product_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    price: {
-      type: DataTypes.FLOAT,
-      decimalNumbers: true,
-      allowNull: false,
-    },
-    stock: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-      defaultValue: 10,
-    },
-  });
+// const Product = sequelize.define('Product', {
+//     id: {
+//       type: DataTypes.FLOAT,
+//       allowNull: false,
+//       primaryKey: true,
+//       autoIncrement: true,
+//     },
+//     product_name: {
+//       type: DataTypes.STRING,
+//       allowNull: false,
+//     },
+//     price: {
+//       type: DataTypes.FLOAT,
+//       decimalNumbers: true,
+//       allowNull: false,
+//     },
+//     stock: {
+//       type: DataTypes.FLOAT,
+//       allowNull: false,
+//       defaultValue: 10,
+//     },
+//   });
 
 // Defining the Tag database model
 
